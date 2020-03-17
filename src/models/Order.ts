@@ -133,3 +133,8 @@ export interface ICreateOrUpdateOrderBulkResponse {
   results: IBulkCreateOrUpdateOrderResponse[]
   hasErrors: boolean
 }
+
+export interface IDeleteOrderResponse {
+  success: boolean
+  message: string
+}
