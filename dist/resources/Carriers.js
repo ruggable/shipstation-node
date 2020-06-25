@@ -49,6 +49,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Carriers = void 0;
 var shipstation_1 = require("../shipstation");
 var Base_1 = require("./Base");
 var Carriers = (function (_super) {

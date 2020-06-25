@@ -3,6 +3,8 @@ import { IAdvancedOptions } from './AdvancedOptions';
 import { IDimensions } from './Dimensions';
 import { IInsuranceOptions } from './InsuranceOptions';
 import { IWeight } from './Weight';
+import { IOrderItem } from './Order';
+import { IPaginatedResult } from './Pagination';
 export interface IShipment {
     shipmentId: number;
     orderId: number;
@@ -26,12 +28,15 @@ export interface IShipment {
     voidDate: string | null;
     marketplaceNotified: boolean;
     notifyErrorMessage: string | null;
-    shipTo: IAddress[];
+    shipTo: IAddress;
     weight: IWeight[];
     dimensions: IDimensions | null;
     insuranceOptions: IInsuranceOptions[];
     advancedOptions: IAdvancedOptions[];
-    shipmentItems: any[] | null;
+    shipmentItems: IOrderItem[] | null;
     labelData: any | null;
     formData: any | null;
+}
+export interface IShipmentPaginationResult extends IPaginatedResult {
+    shipments: IShipment[];
 }
